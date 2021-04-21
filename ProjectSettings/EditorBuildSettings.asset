@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4e73237e224ba1647a7773dfce811d39
+  - enabled: 1
+    path: Assets/Scenes/ChoosePlayer.unity
+    guid: acf99c016506a9c44ac1786aaf1de885
+  - enabled: 1
+    path: Assets/Scenes/RocketCrash.unity
+    guid: f7dfa326f641bc540a0e4baa6edc763d
+  - enabled: 1
+    path: Assets/Scenes/SpinMap.unity
+    guid: 2091520c2fe40194fad23ec9f23b6ef1
+  m_configObjects: {}
