@@ -22,7 +22,7 @@ public class TextMovement : MonoBehaviour
     private void Update()
     {
         Vector2 anchoredPos;
-        Vector3 pos = new Vector3(653, 80 + Mathf.Cos(Time.time * 8) * 15, 0);
+        Vector3 pos = new Vector3(Screen.width * 0.5f, Screen.height * 0.25f + Mathf.Cos(Time.time * 8) * 15, 0);
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Cos(Time.time * 8) * 8);
         RectTransformUtility.ScreenPointToLocalPointInRectangle(m_parent, pos, m_uiCamera, out anchoredPos);
         m_image.anchoredPosition = anchoredPos;

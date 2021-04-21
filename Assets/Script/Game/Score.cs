@@ -15,8 +15,8 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(120, 480 + (ID - 1) * -50, 1);
-        imageClone = Instantiate(icon, new Vector3(50, 0, 1),Quaternion.identity);
+        transform.position = new Vector3(150, Screen.height * 0.5f + (ID - 1) * -50, 1);
+        imageClone = Instantiate(icon, Vector3.zero,Quaternion.identity);
         imageClone.transform.SetParent(gameObject.transform, false);
         pastRank = GameObject.Find("Rank").GetComponent<Ranking>().playerRank[ID - 1];
     }
@@ -56,7 +56,7 @@ public class Score : MonoBehaviour
         float movedPortion = 0;
         while (movedPortion < portion)
         {
-            transform.position = Vector3.Lerp(startPos, new Vector3(120, 480 + currentRank * -50, 1), movedPortion/portion);
+            transform.position = Vector3.Lerp(startPos, new Vector3(150, Screen.height * 0.5f + currentRank * -50, 1), movedPortion/portion);
             movedPortion += Time.deltaTime;
             yield return null;
         }

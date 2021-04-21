@@ -74,7 +74,7 @@ public class ChoosePlayerClone : MonoBehaviour
             cloneDetails = Instantiate(spacesuit, new Vector3(-35 + (8 * i) - 1, -8.5f, 15), Quaternion.Euler(0, -180, 0));
             cloneDetails.GetComponent<spacesuitHead>().playerID = i;
             cloneDetails.GetComponent<spacesuitHead>().status = "ChoosePlayer";
-            cloneImage = Instantiate(ControllerImage, new Vector3(-190 + (110 * i) - 1, -145, 1), Quaternion.Euler(0, 0, 0));
+            cloneImage = Instantiate(ControllerImage, new Vector3(-Screen.width * 0.25f + (i - 0)  * 80, 0 + Screen.height * 0.05f,0), Quaternion.Euler(0, 0, 0));
             cloneImage.GetComponent<ControllerImage>().playerID = i;
             cloneImage.transform.SetParent(GameObject.Find("Canvas").transform, false);
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -290,10 +290,10 @@ RectTransform:
   m_Father: {fileID: 560830090}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -766, y: 297}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -24}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308982678
 MonoBehaviour:
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1074,14 +1074,14 @@ RectTransform:
   m_GameObject: {fileID: 1050310813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2883, y: 1.5459601, z: 1.2883}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 560830090}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 733, y: 312}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -23, y: -18}
   m_SizeDelta: {x: 70, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1210945356
@@ -1267,6 +1267,26 @@ PrefabInstance:
       propertyPath: m_textInfo.spaceCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3762910979468173657, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762910979468173657, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762910979468173657, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762910979468173657, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -1.5192577
+      objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1325,12 +1345,12 @@ PrefabInstance:
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -578
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 319
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
@@ -1345,22 +1365,22 @@ PrefabInstance:
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3762910979468173658, guid: 955c9d6a1a5cf8b429b2d38ee8c48653,
         type: 3}

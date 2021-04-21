@@ -9,7 +9,6 @@ public class rocketScript : MonoBehaviour
     public string status = "Opening";
     private float velocity = 6000.0f;
 
-    // Update is called once per frame
     void Update()
     {
 
