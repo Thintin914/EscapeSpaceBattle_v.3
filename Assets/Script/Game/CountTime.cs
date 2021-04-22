@@ -20,7 +20,7 @@ public class CountTime : MonoBehaviour
     private void Update()
     {
         GetComponent<TMPro.TextMeshProUGUI>().text = (seconds).ToString("0.0");
-        seconds = maxSeconds - Time.time;
+        seconds = maxSeconds - Time.timeSinceLevelLoad;
         if (seconds <= 0)
         {
             collectScore();
