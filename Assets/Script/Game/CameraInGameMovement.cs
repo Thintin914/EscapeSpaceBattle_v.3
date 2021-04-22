@@ -10,15 +10,24 @@ public class CameraInGameMovement : MonoBehaviour
     object[] obj;
 
     public Vector3 offset;
-    public float smoothTime = 0.5f;
-    public float minZoom = 40f;
-    public float maxZoom = 10f;
-    public float zoomLimiter = 50f;
+    public float smoothTime;
+    public float minZoom;
+    public float maxZoom;
+    public float zoomLimiter;
 
     private Vector3 velocity;
     private Camera cam;
+
+    private bool isStarted = false;
+
     private void Start()
     {
+        StartCoroutine("Wait");
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForEndOfFrame();
         cam = GetComponent<Camera>();
         targets = new Transform[PlayerPrefs.GetInt("TotalPlayer")];
         int playerToIndex = 0;
@@ -27,21 +36,26 @@ public class CameraInGameMovement : MonoBehaviour
         foreach (GameObject o in obj)
         {
             GameObject g = o;
-            if (g != null && g.tag == "Suit")
-            {;
+            if (g != null && g.tag == "Suit" && g.GetComponent<PlayerController>().isDead == false)
+            {
+                ;
                 targets[playerToIndex] = g.transform;
                 playerToIndex += 1;
             }
         }
+        isStarted = true;
     }
 
 
     private void LateUpdate()
     {
-        if (targets.Length == 0)
-            return;
-        Move();
-        Zoom();
+        if (isStarted == true)
+        {
+            if (targets.Length == 0)
+                return;
+            Move();
+            Zoom();
+        }
     }
     void Zoom()
     {
@@ -61,7 +75,7 @@ public class CameraInGameMovement : MonoBehaviour
         var bounds = new Bounds(targets[0].position, Vector3.zero);
         for(int i =0; i< targets.Length; i++)
         {
-            if (targets[i].GetComponent<PlayerController>().isDead == false)
+            if (targets[i].position.y > 10)
                 bounds.Encapsulate(targets[i].position);
         }
         return bounds.size.x;
@@ -70,7 +84,7 @@ public class CameraInGameMovement : MonoBehaviour
     {
         if (targets.Length == 1)
         {
-            if (targets[0].GetComponent<PlayerController>().isDead == false)
+            if (targets[0].position.y > 10)
             {
                 return targets[0].position;
             }
@@ -83,7 +97,7 @@ public class CameraInGameMovement : MonoBehaviour
         var bounds = new Bounds(targets[0].position, Vector3.zero);
         for (int i = 0; i < targets.Length; i++)
         {
-            if (targets[i].GetComponent<PlayerController>().isDead == false)
+            if (targets[i].position.y > 10)
                 bounds.Encapsulate(targets[i].position);
         }
 

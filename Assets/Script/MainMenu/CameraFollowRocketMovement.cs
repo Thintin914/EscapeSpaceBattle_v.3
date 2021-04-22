@@ -33,5 +33,9 @@ public class CameraFollowRocketMovement : MonoBehaviour
                 SceneManager.LoadScene("ChoosePlayer");
             }
         }
+        if (theRocket.GetComponent<rocketScript>().status == "End")
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }

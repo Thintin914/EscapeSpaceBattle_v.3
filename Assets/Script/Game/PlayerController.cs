@@ -92,10 +92,10 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y < -25)
         {
-            StartCoroutine("WaitSpawn");
             isDead = true;
             enabled = false;
             controller.enabled = false;
+            StartCoroutine("WaitSpawn");
         }
 
     }
@@ -103,9 +103,9 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitSpawn()
     {
         yield return new WaitForSeconds(3);
+        transform.position = new Vector3(-1.3f, 100 + ID * 12, 70);
         enabled = true;
         controller.enabled = true;
-        transform.position = new Vector3(-1.3f, 100 + ID * 12, 70);
         isDead = false;
     }
 }

@@ -25,10 +25,9 @@ public class spacesuitHead : MonoBehaviour
         if (status == "ChoosePlayer")
         {
             cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-            Vector3 screenPos = cam.WorldToScreenPoint(transform.position);
             cloneButton = Instantiate(headButton);
             cloneButton.transform.SetParent(GameObject.Find("Canvas").transform, false);
-            cloneButton.transform.position = new Vector3(screenPos.x,screenPos.y + 185, screenPos.z);
+            cloneButton.transform.position = new Vector3(Screen.width * 0.1f + (playerID - 1) * 34,Screen.height * 0.5f,0);
             cloneButton.name = "NextHead";
             cloneButton.GetComponent<ChangeHead>().parent = gameObject;
         }
