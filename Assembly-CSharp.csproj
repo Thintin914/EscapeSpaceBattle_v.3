@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\CrashScene\cameraShake.cs" />
     <Compile Include="Assets\Script\CrashScene\explosion.cs" />
     <Compile Include="Assets\Script\CrashScene\rocketCrash.cs" />
+    <Compile Include="Assets\Script\Game\BoomImage.cs" />
     <Compile Include="Assets\Script\Game\CameraInGameMovement.cs" />
     <Compile Include="Assets\Script\Game\CountTime.cs" />
     <Compile Include="Assets\Script\Game\DetatchedRocket.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Script\MainMenu\PauseMenu.cs" />
     <Compile Include="Assets\Script\MainMenu\rocketScript.cs" />
     <Compile Include="Assets\Script\MainMenu\TextMovement.cs" />
+    <Compile Include="Assets\Script\Winning\CreatePlayer.cs" />
     <None Include="Assets\Script\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Script\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Script\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

@@ -18,7 +18,7 @@ public class PlayerIndicator : MonoBehaviour
 
     private void Update()
     {
-        transform.position = cam.WorldToScreenPoint(parent.GetComponent<Transform>().position);
-        transform.position = new Vector3(transform.position.x - 30, transform.position.y + 80, transform.position.z);
+            transform.position = cam.WorldToScreenPoint(parent.GetComponent<Transform>().position);
+            transform.position = new Vector3(transform.position.x - 30, transform.position.y + 80, transform.position.z);
     }
 }

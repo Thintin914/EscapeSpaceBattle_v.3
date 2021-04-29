@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 20f;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
+    public GameObject bubble;
     public bool isDead = false;
 
     private string front;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().name == "ChoosePlayer"){
+        if (SceneManager.GetActiveScene().name != "SpinMap"){
             enabled = false;
         }
     }
@@ -56,56 +57,65 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.gameObject.tag == "Suit")
             hit.gameObject.GetComponent<CharacterController>().Move(direction * speed * Time.deltaTime);
+        if (hit.gameObject.tag == "Rocket")
+            StartCoroutine(WaitSpawn(transform.position, 2));
     }
 
     private void Update()
     {
-        float horizontal = 0;
-        float vertical = 0;
-        if (Input.GetKey(front))
+        if (isDead == false)
         {
-            vertical = 1;
-        }
-        if (Input.GetKey(back))
-        {
-            vertical = -1;
-        }
-        if (Input.GetKey(left))
-        {
-            horizontal = -1;
-        }
-        if (Input.GetKey(right))
-        {
-            horizontal = 1;
-        }
-        direction = new Vector3(horizontal, 0, vertical).normalized;
+            float horizontal = 0;
+            float vertical = 0;
+            if (Input.GetKey(front))
+            {
+                vertical = 1;
+            }
+            if (Input.GetKey(back))
+            {
+                vertical = -1;
+            }
+            if (Input.GetKey(left))
+            {
+                horizontal = -1;
+            }
+            if (Input.GetKey(right))
+            {
+                horizontal = 1;
+            }
+            direction = new Vector3(horizontal, 0, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0, angle, 0);
+            if (direction.magnitude >= 0.1f)
+            {
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0, angle, 0);
 
-            controller.Move(direction * speed * Time.deltaTime);
-        }
-        controller.Move(new Vector3(0, -0.5f, 0));
+                controller.Move(direction * speed * Time.deltaTime);
+            }
+            controller.Move(new Vector3(0, -0.5f, 0));
 
-        if (transform.position.y < -25)
-        {
-            isDead = true;
-            enabled = false;
-            controller.enabled = false;
-            StartCoroutine("WaitSpawn");
+            if (transform.position.y < -25)
+            {
+                StartCoroutine(WaitSpawn(new Vector3(-1.3f, 80 + ID * 12, 70), 4));
+            }
         }
 
     }
 
-    IEnumerator WaitSpawn()
+    public IEnumerator WaitSpawn(Vector3 spawnPoint, float waitSec)
     {
-        yield return new WaitForSeconds(3);
-        transform.position = new Vector3(-1.3f, 100 + ID * 12, 70);
+        isDead = true;
+        enabled = false;
+        controller.enabled = false;
+        GameObject cloneBubble = Instantiate(bubble, spawnPoint, Quaternion.identity);
+        transform.position = new Vector3(spawnPoint.x, spawnPoint.y - 5, spawnPoint.z);
+        gameObject.transform.SetParent(cloneBubble.transform);
+        yield return new WaitForSeconds(waitSec);
+        gameObject.transform.parent = null;
         enabled = true;
         controller.enabled = true;
         isDead = false;
+        Destroy(cloneBubble);
     }
 }

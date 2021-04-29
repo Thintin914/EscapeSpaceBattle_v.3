@@ -7,6 +7,9 @@ TagManager:
   - Head
   - Suit
   - ControllerImage
+  - Rocket
+  - Particle
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -6,8 +6,9 @@ Assets/Scenes/MainMenu.unity
 Assets/Scenes/ChoosePlayer.unity
 Assets/Scenes/RocketCrash.unity
 Assets/Scenes/SpinMap.unity
+Assets/Scenes/Winning.unity
 SceneListEnd?
-7e57012035d77d6327bbca17efb1167a Assembly-CSharp.dll:.CameraInGameMovement
+85cace08b8fcfcda0ebe03c698f003f4 Assembly-CSharp.dll:.CameraInGameMovement
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -23,7 +24,8 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.G
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Seawave
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BoomImage
+b8b13c64fa94f3551ab115742a8f3f7b Assembly-CSharp.dll:.Seawave
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -119,7 +121,8 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PauseMenu
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-d4e80f9f988f12a5d51fe4d8b5690aa5 Assembly-CSharp.dll:.RocketFall
+e848cb3c4677067bffe028bc4caed24a Assembly-CSharp.dll:.RocketFall
+d704feb1b0f2bd475c314d299d6706d9 Assembly-CSharp.dll:.CreatePlayer
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TextMovement
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
@@ -127,7 +130,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DetatchedRocket
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.totalPlayerText
-6f7614e97bb42d56a4c923a826be130f Assembly-CSharp.dll:.CountTime
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CountTime
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 f70c81bc49f4fb77c6b3fef58cd87cd1 Assembly-CSharp.dll:.ControllerImage
 f23f3a63c27cb0a5d0892870fdcc4db9 Assembly-CSharp.dll:.cameraShake
@@ -170,7 +173,7 @@ b68f4b3b4d643faefdfeb70dec3f4a79 Assembly-CSharp.dll:.SpawnRocket
 507174d46dacbc5fe45e28485db5dd1e Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 f438077d0b1a4ccaf5abc94f5e54b7f6 Assembly-CSharp.dll:.explosion
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-b182cf1614a3606bd2cc42a744907ee7 Assembly-CSharp.dll:.PlayerController
+f3534a85b55f4add915a79771fc17d64 Assembly-CSharp.dll:.PlayerController
 7311a7e60e031c3687ecccfe8897f824 Assembly-CSharp.dll:.spacesuitHead
 6f50c2710d725a42ef3de8d740d81ccf Assembly-CSharp.dll:.PlayerIcon
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ChoosePlayerToGame

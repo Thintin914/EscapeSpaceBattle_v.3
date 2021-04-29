@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountTime : MonoBehaviour
 {
@@ -8,9 +9,6 @@ public class CountTime : MonoBehaviour
     float maxSeconds;
     private int[] allScores = new int[4];
     private int highestPlayer;
-    private TMPro.TextMeshProUGUI textClone;
-    public TMPro.TextMeshProUGUI winningText;
-    private GameObject objClone; 
 
     private void Start()
     {
@@ -39,12 +37,9 @@ public class CountTime : MonoBehaviour
                 }
             }
             Time.timeScale = 0;
-            objClone = GameObject.Find("Canvas");
-            textClone = Instantiate(winningText);
-            textClone.text = "Player " + highestPlayer + " victory!";
-            textClone.transform.SetParent(objClone.transform, false);
-            GetComponent<CountTime>().enabled = false;
 
+            PlayerPrefs.SetInt("Winner", highestPlayer);
+            SceneManager.LoadScene("Winning");
         }
     }
 

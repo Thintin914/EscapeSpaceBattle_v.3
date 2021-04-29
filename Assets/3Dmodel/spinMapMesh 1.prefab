@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 2355566048670753451}
   m_Layer: 0
   m_Name: spinMapMesh 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

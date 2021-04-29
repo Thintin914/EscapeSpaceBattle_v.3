@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpinMap.unity
     guid: 2091520c2fe40194fad23ec9f23b6ef1
+  - enabled: 1
+    path: Assets/Scenes/Winning.unity
+    guid: 4f1295e139483e34380010bd3d6754e5
   m_configObjects: {}

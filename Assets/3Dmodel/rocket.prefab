@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3276904309879805704}
   m_Layer: 0
   m_Name: Circle_002_Circle_003
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3276904309879805706}
   m_Layer: 0
   m_Name: Cube_002_Cube_005
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 82316092480253770}
   m_Layer: 0
   m_Name: rocket
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,8 +204,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 27.663612, y: 97.053535, z: 30.526352}
-  m_Center: {x: 0.50561905, y: 48.026768, z: 0.118370056}
+  m_Size: {x: 43.49081, y: 97.053535, z: 43.345642}
+  m_Center: {x: -0.08267403, y: 48.026768, z: -0.37467957}
 --- !u!54 &5684099244647104527
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   - {fileID: 271608870832565523, guid: 6d86659cc1ed19a40a3a6feaabb11146, type: 3}
   - {fileID: 6856852347442462194, guid: 42e306c1c6442524c82bf04a3a3377dd, type: 3}
   - {fileID: 7168329577049962970, guid: b2fafec9a8155d14c94ae48401335a78, type: 3}
+  boom: {fileID: 3569927612093974653, guid: 352523d320845764889424a0ed11b457, type: 3}
 --- !u!82 &82316092480253770
 AudioSource:
   m_ObjectHideFlags: 0

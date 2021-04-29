@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 308982679}
   - component: {fileID: 308982678}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,6 +842,7 @@ MonoBehaviour:
   minZoom: 50
   maxZoom: 35
   zoomLimiter: 20
+  isStarted: 0
 --- !u!82 &1000034186
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1600,10 +1601,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2355566048670531209, guid: fa0c4f35ce89fab4cb91417dfcd04bd8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2355566048670531211, guid: fa0c4f35ce89fab4cb91417dfcd04bd8,
         type: 3}
       propertyPath: m_Name
       value: spinMapMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355566048670531213, guid: fa0c4f35ce89fab4cb91417dfcd04bd8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355566048670531215, guid: fa0c4f35ce89fab4cb91417dfcd04bd8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2355566048670753451, guid: fa0c4f35ce89fab4cb91417dfcd04bd8,
         type: 3}

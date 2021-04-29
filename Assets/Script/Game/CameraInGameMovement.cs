@@ -18,7 +18,7 @@ public class CameraInGameMovement : MonoBehaviour
     private Vector3 velocity;
     private Camera cam;
 
-    private bool isStarted = false;
+    public bool isStarted = false;
 
     private void Start()
     {
@@ -36,7 +36,7 @@ public class CameraInGameMovement : MonoBehaviour
         foreach (GameObject o in obj)
         {
             GameObject g = o;
-            if (g != null && g.tag == "Suit" && g.GetComponent<PlayerController>().isDead == false)
+            if (g != null && g.tag == "Suit")
             {
                 ;
                 targets[playerToIndex] = g.transform;
@@ -46,7 +46,7 @@ public class CameraInGameMovement : MonoBehaviour
         isStarted = true;
     }
 
-
+    
     private void LateUpdate()
     {
         if (isStarted == true)
@@ -57,6 +57,7 @@ public class CameraInGameMovement : MonoBehaviour
             Zoom();
         }
     }
+    
     void Zoom()
     {
         float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter);
