@@ -51,12 +51,11 @@ MonoBehaviour:
   - {fileID: 5099050540639094727, guid: 30cede3bcf960e846bf9d71baaf5fd16, type: 3}
   - {fileID: 5281554261963272493, guid: 210923d494c7298438598ce0b273349c, type: 3}
   - {fileID: 3994204945819154890, guid: 95b9100109ad79c4194cc316cefa0e6a, type: 3}
+  - {fileID: 3806315255659910137, guid: fe25fbe5500559449ab8e015ddf92a5c, type: 3}
   status: 
   ori: 0
   playerID: 0
   headButton: {fileID: 2137934280400443422, guid: b8a45ff8d13860541b618a7559031cea,
-    type: 3}
-  particle: {fileID: 1870472151060641005, guid: 39bc3b444bb8d8e43a81758b212c931f,
     type: 3}
 --- !u!114 &7392959291648566778
 MonoBehaviour:

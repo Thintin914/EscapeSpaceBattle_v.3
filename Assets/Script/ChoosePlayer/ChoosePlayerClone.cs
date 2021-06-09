@@ -18,7 +18,7 @@ public class ChoosePlayerClone : MonoBehaviour
 
     private void Awake()
     {
-        maxHead = 4;
+        maxHead = 5;
         slider = GameObject.Find("Slider").GetComponent<Slider>();
     }
     private void Start()

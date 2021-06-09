@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\CrashScene\cameraShake.cs" />
     <Compile Include="Assets\Script\CrashScene\explosion.cs" />
     <Compile Include="Assets\Script\CrashScene\rocketCrash.cs" />
+    <Compile Include="Assets\Script\Credit\Credit.cs" />
     <Compile Include="Assets\Script\Game\BoomImage.cs" />
     <Compile Include="Assets\Script\Game\CameraInGameMovement.cs" />
     <Compile Include="Assets\Script\Game\CountTime.cs" />
