@@ -58,7 +58,13 @@ public class PlayerController : MonoBehaviour
         if (hit.gameObject.tag == "Suit")
             hit.gameObject.GetComponent<CharacterController>().Move(direction * speed * Time.deltaTime);
         if (hit.gameObject.tag == "Rocket")
-            StartCoroutine(WaitSpawn(transform.position, 2));
+            StartCoroutine(WaitSpawn(transform.position, 2));     
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Beam")
+            StartCoroutine(WaitSpawn(transform.position, 1));
     }
 
     private void Update()

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\CrashScene\explosion.cs" />
     <Compile Include="Assets\Script\CrashScene\rocketCrash.cs" />
     <Compile Include="Assets\Script\Credit\Credit.cs" />
+    <Compile Include="Assets\Script\Game\BeamBehaviour.cs" />
     <Compile Include="Assets\Script\Game\BoomImage.cs" />
     <Compile Include="Assets\Script\Game\CameraInGameMovement.cs" />
     <Compile Include="Assets\Script\Game\CountTime.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Script\Game\RocketFall.cs" />
     <Compile Include="Assets\Script\Game\Score.cs" />
     <Compile Include="Assets\Script\Game\Seawave.cs" />
+    <Compile Include="Assets\Script\Game\SetBeam.cs" />
     <Compile Include="Assets\Script\Game\SpawnRocket.cs" />
     <Compile Include="Assets\Script\MainMenu\CameraFollowRocketMovement.cs" />
     <Compile Include="Assets\Script\MainMenu\PauseMenu.cs" />
